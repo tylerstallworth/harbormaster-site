@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Harbormaster — Kubernetes, as a shipping port</title><link rel="icon" href="./assets/icon.png"><link rel="stylesheet" href="./assets/site.css"></head><body><header><img src="./assets/icon.png" alt=""><a class="brand" href="./">Harbormaster</a><nav><a href="./support/">Support</a><a href="./privacy/">Privacy</a></nav></header><main>
+<h1>Your Kubernetes cluster, as a port you can look around.</h1>
+<p class="lead">Harbormaster is a Mac app that draws a cluster as a working harbor. Namespaces are yards, nodes are ships, pods are containers, and trouble shows up where it happens.</p>
+<img class="shot" src="assets/01-overview.jpg" alt="Harbormaster showing a demo cluster as a harbor, with the clipboard of findings on the right">
+<h2>What it does</h2>
+<ul>
+<li><b>Finds what's wrong, and why.</b> Crash loops, image pull failures, OOMKills, unschedulable pods, stuck rollouts and drains, Services with no endpoints and expiring certificates, worst first, each with when it started, the likely cause and the commands to check it.</li>
+<li><b>Access in plain words.</b> Who has full control, who can gain more access, and what each ServiceAccount can do.</li>
+<li><b>Amazon EKS aware.</b> Access entries, add-on versions, Pod Identity, IRSA, upgrade readiness and the version's support window.</li>
+<li><b>WatchTower.</b> Alerts for new critical findings and recoveries, maintenance windows and an exportable findings report.</li>
+<li><b>Learn Kubernetes on the map.</b> A built-in demo cluster with planted problems and guided lessons. No cluster needed.</li>
+<li><b>Two worlds.</b> The harbor, or the same cluster as a space station.</li>
+</ul>
+<img class="shot" src="assets/04-space.jpg" alt="The same demo cluster drawn as a round space station">
+<h2>Read-only and private</h2>
+<p>Harbormaster only reads from your cluster and never changes anything. It uses your existing kubeconfig and AWS CLI profiles. There's no account, no analytics and no tracking: your cluster data goes only between your Mac and your cluster. <a href="privacy/">Privacy policy</a>.</p>
+<p>Questions or problems? See <a href="support/">Support</a>.</p>
+</main><footer>© 2026 Tyler Stallworth · <a href="mailto:tyler.stallworth@gmail.com">tyler.stallworth@gmail.com</a></footer></body></html>

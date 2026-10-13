@@ -1,0 +1,20 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Harbormaster support</title><link rel="icon" href="../assets/icon.png"><link rel="stylesheet" href="../assets/site.css"></head><body><header><img src="../assets/icon.png" alt=""><a class="brand" href="../">Harbormaster</a><nav><a href="../support/">Support</a><a href="../privacy/">Privacy</a></nav></header><main>
+<h1>Support</h1>
+<p class="lead">Questions, problems or ideas: email <a href="mailto:tyler.stallworth@gmail.com?subject=Harbormaster">tyler.stallworth@gmail.com</a>. Please include your macOS version, the Harbormaster version (Settings → Data) and, for a connection problem, the text under <b>Details</b> on the banner.</p>
+<div class="card"><b>Requirements:</b> macOS 12 or later, on Apple silicon or Intel. To connect to a real cluster you need a kubeconfig (the file <code>kubectl</code> uses). For Amazon EKS you also need the AWS CLI, for example <code>brew install awscli</code>. Without either, Harbormaster opens its built-in demo cluster so you can look around and take the lessons.</div>
+<h2>Common questions</h2>
+<h3>How do I connect my cluster?</h3>
+<p>Harbormaster reads <code>~/.kube/config</code> automatically. You can also use <b>+ Add clusters</b> to import another kubeconfig file, or to find your EKS clusters with an AWS profile and region. Switch clusters with the name at the top left.</p>
+<h3>My EKS cluster says "AWS sign-in needed".</h3>
+<p>Your AWS SSO session has expired, which is routine after a restart or a long break. Click <b>Sign in with AWS SSO</b> on the banner, approve the sign-in in your browser, and Harbormaster reconnects by itself. If it says the identity has no access, your IAM role needs an access entry (or an <code>aws-auth</code> mapping) on the cluster.</p>
+<h3>It says it can't run my sign-in command.</h3>
+<p>A kubeconfig can name any program to run for sign-in. Harbormaster runs the well-known ones (<code>aws</code>, <code>aws-iam-authenticator</code>, <code>kubelogin</code>, <code>gke-gcloud-auth-plugin</code>, <code>az</code>) and asks before running anything else. In the Mac App Store edition, sign-in tools can read <code>~/.kube</code> and use <code>~/.aws</code> but nothing else in your home folder, so a plugin that keeps its cache elsewhere may fail. Importing a kubeconfig that signs in another way works around it.</p>
+<h3>Does Harbormaster change anything in my cluster?</h3>
+<p>No. It only sends read requests (GET, list and watch), the same as <code>kubectl get</code>. The in-app Guide (<b>What it reads, and permissions</b>) lists exactly what it reads.</p>
+<h3>Where is there a terminal?</h3>
+<p>The Mac App Store edition doesn't include a terminal, because Apple's sandbox keeps shells away from your files and tools. Everything else, including the map, findings, Access, WatchTower and the lessons, is the same.</p>
+<h3>How do I reset it?</h3>
+<p>Settings → Data has <b>Reset view choices</b> and <b>Restore default settings</b>. Removing the app from Applications removes it; its data lives in <code>~/Library/Containers/dev.harbormaster.app</code>.</p>
+<h3>Refunds</h3>
+<p>Purchases are handled by Apple. Request a refund at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+</main><footer>© 2026 Tyler Stallworth · <a href="mailto:tyler.stallworth@gmail.com">tyler.stallworth@gmail.com</a></footer></body></html>

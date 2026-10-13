@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Harbormaster privacy policy</title><link rel="icon" href="../assets/icon.png"><link rel="stylesheet" href="../assets/site.css"></head><body><header><img src="../assets/icon.png" alt=""><a class="brand" href="../">Harbormaster</a><nav><a href="../support/">Support</a><a href="../privacy/">Privacy</a></nav></header><main>
+<h1>Harbormaster privacy policy</h1>
+<p><i>Last updated: October 13, 2026</i></p>
+<p>Harbormaster is a desktop app that shows your Kubernetes clusters as a map. This policy explains what happens to your data when you use it.</p>
+<h2>The short version</h2>
+<p>Harbormaster doesn't collect, store on any server, sell or share any information about you. It has no accounts, no analytics, no advertising and no crash reporting. Nothing you see in the app is sent to the developer.</p>
+<h2>What the app reads, and where it goes</h2>
+<ul>
+<li><b>Your clusters.</b> Harbormaster reads cluster information (pods, nodes, namespaces, events, permissions and similar) from the Kubernetes API servers you connect it to. It only reads: it never changes anything in a cluster. This data goes directly between your Mac and your cluster and is kept only in the app's memory while it's open.</li>
+<li><b>Your kubeconfig and AWS profiles.</b> To connect, Harbormaster reads the kubeconfig files on your Mac (or the ones you import) and, for Amazon EKS clusters, your AWS CLI profiles. Credentials are used only to sign in to your own clusters and AWS account. They're never sent anywhere else.</li>
+<li><b>AWS.</b> For EKS clusters, Harbormaster calls AWS through your AWS CLI with read-only requests (for example, the cluster's version and add-ons). Those requests go from your Mac to AWS under your own AWS account.</li>
+<li><b>Settings.</b> Your preferences (world, theme, which clusters you watch, imported kubeconfigs) and short summaries such as how many nodes and findings a cluster had when you last looked are saved in the app's own folder on your Mac. You can delete them at any time by removing the app and its data.</li>
+</ul>
+<h2>Data collected by the developer</h2>
+<p>None. The app makes no network connections other than to the clusters and AWS endpoints you configure.</p>
+<h2>Children</h2>
+<p>Harbormaster is a tool for software engineers and isn't directed at children.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the new version will be posted at this address with a new date.</p>
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:tyler.stallworth@gmail.com">tyler.stallworth@gmail.com</a></p></main><footer>© 2026 Tyler Stallworth · <a href="mailto:tyler.stallworth@gmail.com">tyler.stallworth@gmail.com</a></footer></body></html>
